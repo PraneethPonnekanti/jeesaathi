@@ -2,8 +2,7 @@ pip
 pandas
 streamlit
 numpy
-plotly.express 
-io
+plotly.express
 pygsheets
 datetime 
 smtplib
