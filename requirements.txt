@@ -3,7 +3,6 @@ pandas
 streamlit
 numpy
 plotly.express 
-base64
 io
 pygsheets
 datetime 
