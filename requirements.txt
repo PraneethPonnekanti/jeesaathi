@@ -3,7 +3,8 @@ streamlit
 numpy
 plotly.express 
 plotly.graph_objects
-base64,io
+base64
+io
 pygsheets
 datetime 
 smtplib
