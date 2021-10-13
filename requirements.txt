@@ -5,5 +5,4 @@ numpy
 plotly.express
 pygsheets
 datetime 
-time 
 pydrive
