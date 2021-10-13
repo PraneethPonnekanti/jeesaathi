@@ -1,0 +1,15 @@
+pandas
+streamlit
+numpy
+plotly.express 
+plotly.graph_objects
+base64,io
+pygsheets
+datetime 
+smtplib
+email.mime.multipart MIMEMultipart
+email.mime.text MIMEText
+email.mime.base MIMEBase
+email encoders
+time 
+pydrive
