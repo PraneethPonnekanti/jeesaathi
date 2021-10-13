@@ -28,16 +28,16 @@ from pydrive.drive import GoogleDrive
 
 
 
-r1 = pd.read_csv(r".\Inputs\Josaa_R1.csv")
-r2 = pd.read_csv(r".\Inputs\Josaa_R2.csv")
-r3 = pd.read_csv(r".\Inputs\Josaa_R3.csv")
-r4 = pd.read_csv(r".\Inputs\Josaa_R4.csv")
-r5 = pd.read_csv(r".\Inputs\Josaa_R5.csv")
-r6 = pd.read_csv(r".\Inputs\Josaa_R6.csv")
-college_states = pd.read_csv(r".\Inputs\Josaa_College_States.csv")
-domicile_states = pd.read_csv(r".\Inputs\josaa_domicile_states.csv")
-josaa_business_rules = pd.read_csv(r".\Inputs\josaa_business_rules.csv")
-course_df = pd.read_csv(r".\Inputs\josaa_courses.csv")
+r1 = pd.read_csv("./Inputs/Josaa_R1.csv")
+r2 = pd.read_csv("./Inputs/Josaa_R2.csv")
+r3 = pd.read_csv("./Inputs/Josaa_R3.csv")
+r4 = pd.read_csv("./Inputs/Josaa_R4.csv")
+r5 = pd.read_csv("./Inputs/Josaa_R5.csv")
+r6 = pd.read_csv("./Inputs/Josaa_R6.csv")
+college_states = pd.read_csv("./Inputs/Josaa_College_States.csv")
+domicile_states = pd.read_csv("./Inputs/josaa_domicile_states.csv")
+josaa_business_rules = pd.read_csv("./Inputs/josaa_business_rules.csv")
+course_df = pd.read_csv("./Inputs/josaa_courses.csv")
 #josaa_br_unstacked = josaa_business_rules.explode('Homestate')
 
 
