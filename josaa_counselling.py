@@ -261,9 +261,10 @@ st.cache(super)
 st.header("Jee Mains 2021 : College Predictor ")
 st.markdown('''
             ###### College Predictor based on the data from [JOSAA 2020 Opening & Closing Ranks](https://josaa.nic.in/Result/Result/currentorcr.aspx)
-            ###### Wanna checkout IIT's using your JEE Advanced rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_advanced.py) 
-             If you are a mobile user, please press the `>` button at the top-left corner on the page for the sidebar.
             **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/)
+            * Wanna checkout IIT's using your JEE Advanced rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_advanced.py) 
+            ** Mobile user ? **, please press the `>` button at the top-left corner on the page for the sidebar. 
+            
             ''')
 
 #@stcache;
@@ -290,7 +291,7 @@ inp_inst_type = st.sidebar.multiselect("Select Institute Types : ", inst_type,de
 inp_round = st.sidebar.multiselect("Counselling Round : ", master_df['Round'].unique(),default=1)
 #inp_jee_flag = st.sidebar.radio('Have you qualified JEE Advanced ?', ('Yes', 'No'))
 st.markdown(" **Closing ranks tend to vary each year by some number X.**")
-inp_rank_var = st.slider("Select the number X from the slider",0,min(_inp_rank,3000), key = 'rank_Var')
+inp_rank_var = st.slider("Select the number X from the slider",0,min(_inp_rank,3000))
 #inp_branch_selector = s2.multiselect("Select Courses : ", master_df['Branch_master'].unique(), default = list(master_df['Branch_master'].unique()))
 #inp_branch_selector = st.sidebar.multiselect("Select Courses : ", master_df['Branch_master'].unique(), default = list(master_df['Branch_master'].unique()))
 location_master = list(master_df['Location'].unique())
