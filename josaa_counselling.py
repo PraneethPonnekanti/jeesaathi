@@ -153,8 +153,8 @@ def search_results(jee_rank,rank_var,inp_st,df,round_no,inst_bucket,d_state,loca
     final_result_df = final_result_df[['Institute', 'Academic Program Name', 'Course Duration', 'Seat Type','Quota', 'Gender', 'Round', 'Opening Rank', 'Closing Rank', 'Location']]
     final_result_df = final_result_df.sort_values(['Closing Rank','Opening Rank'],ascending=True)
     st.subheader("Your Search Results : ")
-    #st.dataframe(final_result_df)
-    df_to_plotly(final_result_df)
+    st.dataframe(final_result_df)
+    #df_to_plotly(final_result_df)
     return final_result_df
         #st.write(result_df)
 
@@ -261,10 +261,14 @@ st.cache(super)
 st.header("Jee Mains 2021 : College Predictor ")
 st.markdown('''
             ###### College Predictor based on the data from [JOSAA 2020 Opening & Closing Ranks](https://josaa.nic.in/Result/Result/currentorcr.aspx) 
+              
              **Mobile user ? **, please press the `>` button at the top-left corner on the page for the sidebar.  
+               
              Wanna checkout IIT's using your JEE Advanced rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_advanced.py)   
+              
             **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/)  
-            
+              
+              
             
             
             ''')
