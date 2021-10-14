@@ -260,10 +260,11 @@ st.cache(super)
 
 st.header("Jee Mains 2021 : College Predictor ")
 st.markdown('''
-            ###### College Predictor based on the data from [JOSAA 2020 Opening & Closing Ranks](https://josaa.nic.in/Result/Result/currentorcr.aspx)
-            **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/)
-            * Wanna checkout IIT's using your JEE Advanced rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_advanced.py) 
-            ** Mobile user ? **, please press the `>` button at the top-left corner on the page for the sidebar. 
+            ###### College Predictor based on the data from [JOSAA 2020 Opening & Closing Ranks](https://josaa.nic.in/Result/Result/currentorcr.aspx) 
+             **Mobile user ? **, please press the `>` button at the top-left corner on the page for the sidebar. 
+            **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/)  
+            Wanna checkout IIT's using your JEE Advanced rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_advanced.py)   
+            
             
             ''')
 
