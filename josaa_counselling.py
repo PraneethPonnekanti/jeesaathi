@@ -153,8 +153,8 @@ def search_results(jee_rank,rank_var,inp_st,df,round_no,inst_bucket,d_state,loca
     final_result_df = final_result_df[['Institute', 'Academic Program Name', 'Course Duration', 'Seat Type','Quota', 'Gender', 'Round', 'Opening Rank', 'Closing Rank', 'Location']]
     final_result_df = final_result_df.sort_values(['Closing Rank','Opening Rank'],ascending=True)
     st.subheader("Your Search Results : ")
-    st.dataframe(final_result_df)
-    #df_to_plotly(final_result_df)
+    #st.dataframe(final_result_df)
+    df_to_plotly(final_result_df)
     return final_result_df
         #st.write(result_df)
 
