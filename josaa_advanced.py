@@ -296,7 +296,7 @@ inp_gender = st.sidebar.radio("Select Your Gender : ", ('Male', 'Female'), key =
 #inp_dom_state = s1.selectbox("Select your domicile state : ",domicile_states['Domicile State'].unique())
 #inp_dom_state = st.sidebar.selectbox("Select your domicile state : ",domicile_states['Domicile State'].unique(), key ='Domicile State')
 #inp_inst_type = s1.multiselect("Select Institute Types : ", inst_type,default=['NIT'])
-inp_inst_type = st.sidebar.multiselect("Select Institute Types : ", inst_type)
+inp_inst_type = st.sidebar.multiselect("Select Institute Types : ", inst_type, default = inst_type)
 #inp_round = s1.multiselect("Counselling Round : ", master_df['Round'].unique(),default=1)
 inp_round = st.sidebar.multiselect("Counselling Round : ", master_df['Round'].unique(),default=1)
 #inp_jee_flag = st.sidebar.radio('Have you qualified JEE Advanced ?', ('Yes', 'No'))
