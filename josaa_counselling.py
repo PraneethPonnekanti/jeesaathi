@@ -315,7 +315,7 @@ sub_base['Name'] = name
 def main():
     if _inp_rank == '' or name == '' : 
     #or not _inp_rank.isnumeric():
-            st.warning("Please enter your name to proceed.")
+            st.warning("Please enter your name to proceed further.")
     else : 
         
         st.write ("Hi " + name + ", thanks for using JEE Counsellor.")
