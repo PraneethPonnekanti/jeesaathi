@@ -322,7 +322,7 @@ with open('user_base.csv', 'w') as f:
 def main():
     if _inp_rank == '' or name == '' : 
     #or not _inp_rank.isnumeric():
-            st.warning("Please provide a valid name.")
+            st.warning("Please provide your name to proceed further.")
     else : 
         
         st.write ("Hi " + name + ", thanks for using JEE Counsellor.")
