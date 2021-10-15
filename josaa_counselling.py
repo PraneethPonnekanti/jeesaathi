@@ -313,9 +313,9 @@ sub_base['Name'] = name
 #wks.set_dataframe(sub_base,(1,1))
 
 def main():
-    if _inp_rank == '' or int(_inp_rank) <= 0 : 
+    if _inp_rank == '' or name == '' : 
     #or not _inp_rank.isnumeric():
-            st.warning("Please provide a valid non-negative numeric input.")
+            st.warning("Please enter your name to proceed.")
     else : 
         
         st.write ("Hi " + name + ", thanks for using JEE Counsellor.")
