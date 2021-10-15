@@ -267,7 +267,7 @@ st.markdown('''
               
              **Mobile user ? **, please press the `>` button at the top-left corner on the page for the sidebar.  
                
-             * Wanna checkout NIT/IIIT/GFTI's using your JEE Mains rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_counselling.py)   
+             * Wanna checkout NIT/IIIT/GFTI's using your JEE Mains rank ? Checkout our [JEE Mains Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_counselling.py)   
               
             **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/)  
               
