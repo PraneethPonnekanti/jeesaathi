@@ -258,11 +258,11 @@ inst_type = [ele for ele in inst_type if ele not in unwanted_engg_mains_inst]
 
 st.cache(super)
 
-st.header("Jee Mains 2021 : College Predictor ")
+st.header("Jee Mains 2022 : College Predictor ")
 st.markdown('''
-            ###### College Predictor based on the data from [JOSAA 2020 Opening & Closing Ranks](https://josaa.nic.in/Result/Result/currentorcr.aspx) 
+            ###### College Predictor based on the data from [JOSAA 2021 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/OpeningClosingRankArchieve.aspx) 
               
-             **Mobile user ? **, please press the `>` button at the top-left corner on the page for the sidebar.  
+             **Mobile user ?**, please press the `>` button at the top-left corner on the page for the sidebar.  
                
              * Wanna checkout IIT's using your JEE Advanced rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_advanced.py)   
               
@@ -290,7 +290,7 @@ inp_category = st.sidebar.selectbox("Select Your Category", master_df['Seat Type
 #inp_gender = s1.radio("Select Your Gender : ", ('Male', 'Female'))
 inp_gender = st.sidebar.radio("Select Your Gender : ", ('Male', 'Female'), key ='Gender')
 #inp_dom_state = s1.selectbox("Select your domicile state : ",domicile_states['Domicile State'].unique())
-inp_dom_state = st.sidebar.selectbox("Select your domicile state : ",domicile_states['Domicile State'].unique(), key ='Domicile State')
+inp_dom_state = st.sidebar.selectbox("Select your home/domicile state : ",domicile_states['Domicile State'].unique(), key ='Domicile State')
 #inp_inst_type = s1.multiselect("Select Institute Types : ", inst_type,default=['NIT'])
 inp_inst_type = st.sidebar.multiselect("Select Institute Types : ", inst_type,default=['NIT'])
 #inp_round = s1.multiselect("Counselling Round : ", master_df['Round'].unique(),default=1)

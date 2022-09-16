@@ -249,7 +249,7 @@ int_columns = ['Opening Rank', 'Closing Rank', 'Round', 'Course Duration']
    
 inst_type = list(master_df['Institute Type'].unique())
 
-#Remove IIT's and SPA's for Engineering Predictions
+#Select only IIT's and SPA's for JEE Advanced Predictions
 #unwanted_engg_adv_inst = {'IIT'}
 wanted_engg_mains_inst = {'IIT'}
 inst_type = [ele for ele in inst_type if ele in wanted_engg_mains_inst]
@@ -261,11 +261,11 @@ inst_type = [ele for ele in inst_type if ele in wanted_engg_mains_inst]
 
 st.cache(super)
 
-st.header("Jee Advanced 2021 : College Predictor ")
+st.header("Jee Advanced 2022 : College Predictor ")
 st.markdown('''
-            ###### College Predictor based on the data from [JOSAA 2020 Opening & Closing Ranks](https://josaa.nic.in/Result/Result/currentorcr.aspx) 
+            ###### College Predictor based on the data from [JOSAA 2021 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/OpeningClosingRankArchieve.aspx) 
               
-             **Mobile user ? **, please press the `>` button at the top-left corner on the page for the sidebar.  
+             **Mobile user ?**, please press the `>` button at the top-left corner on the page for the sidebar.  
                
              * Wanna checkout NIT/IIIT/GFTI's using your JEE Mains rank ? Checkout our [JEE Mains Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_counselling.py)   
               
