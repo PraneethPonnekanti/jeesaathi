@@ -208,6 +208,7 @@ def sort_list(_input):
     return _input
 
 append_df = pd.concat([r1,r2,r3,r4,r5,r6],ignore_index=True)
+append_df = append_df.dropna()
 
 inst_list = pd.DataFrame(append_df.Institute.unique(),columns = ['Institute'])
 
