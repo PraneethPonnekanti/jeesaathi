@@ -188,7 +188,7 @@ def download_table(df,name):
     writer.save()
     excel_data = output.getvalue()
     b64 = base64.b64encode(excel_data)
-    payload = b64.decode().decode("utf-8")
+    payload = b64.decode("utf-8")
     #st.markdown("#### Download the above table as an excel file ###")
     html = f'<a download="{op_file}" href="data:text/xml;base64,{payload}" target="_blank">Click here to download the table results in an excel file !</a>'
     #timestr = time.strf()
