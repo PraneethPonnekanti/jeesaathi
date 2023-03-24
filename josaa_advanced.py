@@ -187,10 +187,14 @@ def download_table(df,name):
     df.to_excel(writer, sheet_name = sheet_fmt,index = False)
     writer.save()
     excel_data = output.getvalue()
-    b64 = base64.b64encode(excel_data)
-    payload = b64.decode("utf-8")
+    #b64 = base64.b64encode(excel_data)
+    #payload = b64.decode()
+    b64 = base64.urlsafe_b64encode(excel_data).decode()
+    # Create a link to download the file
+    
     #st.markdown("#### Download the above table as an excel file ###")
-    html = f'<a download="{op_file}" href="data:text/xml;base64,{payload}" target="_blank">Click here to download the table results in an excel file !</a>'
+    href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" target="_blank">Click here to download the table results in an Excel file!</a>'
+    #html = f'<a download="{op_file}" href="data:text/xml;base64,{payload}" target="_blank">Click here to download the table results in an excel file !</a>'
     #timestr = time.strf()
     #csv = df.to_csv(op_file,index=False)
     #df_dict = df.to_dict('list')
@@ -266,7 +270,7 @@ st.header("Jee Advanced 2022 : College Predictor ")
 st.markdown('''
             ###### College Predictor based on the data from [JOSAA 2021 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/OpeningClosingRankArchieve.aspx) 
               
-             **Mobile user ?**, please press the `>` button at the top-left corner on the page for the sidebar.  
+             **Mobile user ?** please press the `>` button at the top-left corner on the page for the sidebar.  
                
              * Wanna checkout NIT/IIIT/GFTI's using your JEE Mains rank ? Checkout our [JEE Mains Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_counselling.py)   
               
