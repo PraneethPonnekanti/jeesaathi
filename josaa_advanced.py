@@ -171,7 +171,7 @@ def get_table_download_link(df,name):
     #print("b64", b64)
     #href = f'<a href="data:file/csv;base64,{b64}">Download csv file</a>'
     return op_file
-
+'''
 def download_table(df,name):
     """Generates a link allowing the data in a given panda dataframe to be downloaded
     in:  dataframe
@@ -200,7 +200,29 @@ def download_table(df,name):
     st.markdown(html,unsafe_allow_html=True)
     #st.success("Downloading of file : " + op_file + " is completed.")
     return
-    
+ '''
+def download_table(df, name):
+    # create file name and sheet name
+    file_name = f"JeeSaathi_SearchResults_{name}.xlsx"
+    sheet_name = f"{name}_{time.strftime('%d-%m-%Y')}"
+
+    # create Excel file in memory buffer
+    output = io.BytesIO()
+    writer = pd.ExcelWriter(output, engine="xlsxwriter")
+    df.to_excel(writer, sheet_name=sheet_name, index=False)
+    writer.save()
+    excel_data = output.getvalue()
+
+    # use JavaScript to initiate download from new window
+    b64 = base64.b64encode(excel_data).decode("utf-8")
+    script = f"""\
+        var link = document.createElement('a');
+        link.href = "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}";
+        link.target = '_blank';
+        link.download = '{file_name}';
+        link.click();
+        """
+    st.write(f'<script>{script}</script>', unsafe_allow_html=True)
 
 
 def sort_list(_input):
