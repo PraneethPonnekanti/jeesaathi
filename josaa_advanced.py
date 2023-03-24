@@ -171,8 +171,8 @@ def get_table_download_link(df,name):
     #print("b64", b64)
     #href = f'<a href="data:file/csv;base64,{b64}">Download csv file</a>'
     return op_file
-"""
-def download_table(df,name):
+
+def download_table2(df,name):
     """Generates a link allowing the data in a given panda dataframe to be downloaded
     in:  dataframe
     out: href string
@@ -200,7 +200,7 @@ def download_table(df,name):
     st.markdown(html,unsafe_allow_html=True)
     #st.success("Downloading of file : " + op_file + " is completed.")
     return
- """
+
 def download_table(df, name):
     # create file name and sheet name
     file_name = f"JeeSaathi_SearchResults_{name}.xlsx"
