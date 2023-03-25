@@ -196,7 +196,7 @@ def download_table(df,name):
     #st.markdown("#### Download the above table as an excel file ###")
     #href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" target="_blank">Click here to download the table results in an Excel file!</a>'
     #html = f'<a download="{op_file}" href="data:text/xml;base64,{payload}" target="_blank">Click here to download the table results in an excel file !</a>'
-    html = f'<a download="{op_file}" href="data:text/xlsx;base64,{b64}" target="_blank">Click here to download the table results in an excel file !</a>'
+    html = f'<a download="{op_file}" href="data:text/xml;base64,{b64}" target="_blank">Click here to download the table results in an excel file !</a>'
     #html = f'<a download="{op_file}" href="data:application/vnd.ms-excel.spreadsheetml.sheet;base64,{b64}">Click here to download the table results in an excel file !</a>'
     #html = f'<a download="{op_file}" href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{base64.b64encode(open(op_file, "rb").read()).decode()}">Click here to download the table results in an Excel file!</a>'
     #timestr = time.strf()
