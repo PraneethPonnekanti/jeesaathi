@@ -1,0 +1,34 @@
+JeeSaathi Search Tool User Guide/Manual
+
+Introduction:
+JeeSaathi is a search tool for students who are looking for admission to engineering courses in India. It provides a user-friendly interface for filtering and sorting engineering colleges based on various criteria like location, quota, gender, institute type, course duration, and academic program name. In this manual, we will go through the various features of JeeSaathi and how to use them effectively.
+
+Features:
+
+Search: This feature allows the user to search for colleges based on their JEE rank, seat type, and other criteria. The search results are displayed in a table format that can be sorted and filtered based on various parameters.
+
+Filter: This feature allows the user to filter the search results based on various criteria like location, quota, gender, institute type, course duration, and academic program name. The filters can be applied using the dropdown menus provided on the search page.
+
+Sort: This feature allows the user to sort the search results based on various parameters like closing rank, opening rank, location, and course duration. The sort options can be accessed using the dropdown menu provided on the search page.
+
+Download: This feature allows the user to download the search results in an Excel or CSV file format. The download link can be accessed by clicking on the "Download Results" button provided on the search page.
+
+How to use JeeSaathi:
+
+Enter your JEE rank in the search box provided on the search page. You can also select the seat type (i.e., General or OBC) from the dropdown menu provided.
+
+Apply filters to the search results by selecting the desired options from the dropdown menus provided. You can select multiple options for each filter.
+
+Sort the search results by selecting the desired option from the "Sort By" dropdown menu provided.
+
+Click on the "Search" button to display the filtered and sorted search results in a table format.
+
+To download the search results, click on the "Download Results" button provided on the search page. You can choose to download the results in an Excel or CSV file format.
+
+Conclusion:
+JeeSaathi is a powerful search tool that can help students find the best engineering colleges in India based on their JEE rank and other criteria. With its user-friendly interface and advanced search features, JeeSaathi is the perfect tool for anyone who is looking to make an informed decision about their college admissions.
+
+
+
+
+Regenerate response
