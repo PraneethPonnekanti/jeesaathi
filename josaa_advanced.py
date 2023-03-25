@@ -274,10 +274,6 @@ st.markdown('''
              * Wanna checkout NIT/IIIT/GFTI's using your JEE Mains rank ? Checkout our [JEE Mains Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_counselling.py)   
               
             **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/)  
-              # JeeSaathi Search Tool User Guide/Manual
-st.markdown("# JeeSaathi Search Tool User Guide/Manual")
-with open("README.md", "r") as f:
-    st.markdown(f.read())
               
             
             
