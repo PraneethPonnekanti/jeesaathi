@@ -191,6 +191,7 @@ def download_table(df,name):
     b64 = base64.b64encode(excel_data)
     payload = b64.decode()
     #b64 = base64.urlsafe_b64encode(excel_data).decode()
+    op_file = op_file.strip(".xml")
     # Create a link to download the file
     
     #st.markdown("#### Download the above table as an excel file ###")
