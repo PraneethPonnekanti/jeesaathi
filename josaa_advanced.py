@@ -186,6 +186,7 @@ def download_table(df,name):
     # Write the data frame to the BytesIO object and save it
     df.to_excel(writer, sheet_name = sheet_fmt,index = False)
     writer.save()
+    output.seek(0)
     excel_data = output.getvalue()
     #b64 = base64.b64encode(excel_data)
     #payload = b64.decode()
@@ -196,8 +197,8 @@ def download_table(df,name):
     #href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" target="_blank">Click here to download the table results in an Excel file!</a>'
     #html = f'<a download="{op_file}" href="data:text/xml;base64,{payload}" target="_blank">Click here to download the table results in an excel file !</a>'
     #html = f'<a download="{op_file}" href="data:text/xml;base64,{b64}" target="_blank">Click here to download the table results in an excel file !</a>'
-    #html = f'<a download="{op_file}" href="data:application/vnd.ms-excel.spreadsheetml.sheet;base64,{b64}">Click here to download the table results in an excel file !</a>'
-    html = f'<a download="{op_file}" href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{base64.b64encode(open(op_file, "rb").read()).decode()}">Click here to download the table results in an Excel file!</a>'
+    html = f'<a download="{op_file}" href="data:application/vnd.ms-excel.spreadsheetml.sheet;base64,{b64}">Click here to download the table results in an excel file !</a>'
+    #html = f'<a download="{op_file}" href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{base64.b64encode(open(op_file, "rb").read()).decode()}">Click here to download the table results in an Excel file!</a>'
     #timestr = time.strf()
     #csv = df.to_csv(op_file,index=False)
     #df_dict = df.to_dict('list')
