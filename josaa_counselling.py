@@ -260,7 +260,7 @@ inst_type = [ele for ele in inst_type if ele not in unwanted_engg_mains_inst]
 
 st.cache(super)
 
-st.header("Jee Mains 2022 : College Predictor ")
+st.header("Jee Mains 2023 : College Predictor ")
 st.markdown('''
             ###### College Predictor based on the data from [JOSAA 2022 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx) 
               
