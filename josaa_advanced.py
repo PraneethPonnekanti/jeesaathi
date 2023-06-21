@@ -265,9 +265,9 @@ inst_type = [ele for ele in inst_type if ele in wanted_engg_mains_inst]
 
 st.cache(super)
 
-st.header("Jee Advanced 2022 : College Predictor ")
+st.header("Jee Advanced 2023 : College Predictor ")
 st.markdown('''
-            ###### College Predictor based on the data from [JOSAA 2021 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/OpeningClosingRankArchieve.aspx) 
+            ###### College Predictor based on the data from [JOSAA 2022 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx) 
               
              **Mobile user ?**, please press the `>` button at the top-left corner on the page for the sidebar.  
                
