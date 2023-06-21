@@ -262,13 +262,13 @@ st.cache(super)
 
 st.header("Jee Mains 2022 : College Predictor ")
 st.markdown('''
-            ###### College Predictor based on the data from [JOSAA 2021 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/OpeningClosingRankArchieve.aspx) 
+            ###### College Predictor based on the data from [JOSAA 2022 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx) 
               
              **Mobile user ?**, please press the `>` button at the top-left corner on the page for the sidebar.  
                
              * Wanna checkout IIT's using your JEE Advanced rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_advanced.py)   
               
-            **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/)  
+            **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/) 
               
               
             
