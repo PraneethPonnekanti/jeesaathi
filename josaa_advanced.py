@@ -235,8 +235,12 @@ append_df['Jee_Adv_flag'] = np.where(append_df['Institute Type'] == 'IIT', True,
 master_df = append_df.merge(college_states, on = 'Institute').merge(course_df, on = 'Academic Program Name').copy()
 
 #Clean Alphabets from the Opening and Closing Rank Columns
-master_df['Opening Rank'] = master_df['Opening Rank'].str.replace(r'[^\d.]+', '').astype(int)
-master_df['Closing Rank'] = master_df['Closing Rank'].str.replace(r'[^\d.]+', '').astype(int)
+#master_df['Opening Rank'] = master_df['Opening Rank'].str.replace(r'[^\d.]+', '').astype(int)
+master_df['Opening Rank'] = pd.to_numeric(master_df['Opening Rank'].str.replace(r'[^\d.]+', '', regex=True), errors='coerce')
+#master_df['Opening Rank'] = pd.to_numeric(master_df['Opening Rank'], errors='coerce')
+#master_df['Closing Rank'] = master_df['Closing Rank'].str.replace(r'[^\d.]+', '').astype(int)
+master_df['Closing Rank'] = pd.to_numeric(master_df['Closing Rank'].str.replace(r'[^\d.]+', '', regex=True), errors='coerce')
+#master_df['Opening Rank'] = pd.to_numeric(master_df['Opening Rank'], errors='coerce')
 master_df['Institute'] = master_df['Institute'].str.replace('National Institute of Technology, ', 'NIT ').replace('Indian Institute of Technology,','IIT ')
 master_df['Institute'] = master_df['Institute'].str.replace('Indian Institute of Information Technology,', 'IIIT ')
 master_df['Institute'] = master_df['Institute'].str.replace("Indian institute of information technology,","IIIT ")
