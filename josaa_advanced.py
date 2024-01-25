@@ -185,7 +185,7 @@ def download_table(df,name):
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
     # Write the data frame to the BytesIO object and save it
     df.to_excel(writer, sheet_name = sheet_fmt,index = False)
-    writer.save()
+    #writer.save()
     excel_data = output.getvalue()
     b64 = base64.b64encode(excel_data)
     payload = b64.decode()
