@@ -172,7 +172,40 @@ def get_table_download_link(df,name):
     #href = f'<a href="data:file/csv;base64,{b64}">Download csv file</a>'
     return op_file
 
-def download_table(df,name):
+def download_table(df, name):
+    """
+    Generates a link allowing the data in a given panda dataframe to be downloaded
+    in:  dataframe
+    out: href string
+    """
+    op_file = "JeeSaathi_Adv_SearchResults_" + name + ".xlsx"
+    sheet_fmt = name + "_" + str(time.strftime('%d-%m-%Y'))
+    output = io.BytesIO()
+    
+    # Use the BytesIO object as the filehandle
+    writer = pd.ExcelWriter(output, engine='xlsxwriter')
+    
+    # Write the data frame to the BytesIO object and save it
+    df.to_excel(writer, sheet_name=sheet_fmt, index=False)
+    
+    # Explicitly close the writer to ensure data is written to BytesIO
+    writer.close()
+    
+    # Move the BytesIO cursor to the beginning to read its content
+    output.seek(0)
+    
+    excel_data = output.getvalue()
+    b64 = base64.b64encode(excel_data)
+    payload = b64.decode()
+    
+    # Display the download link
+    html = f'<a download="{op_file}" href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{payload}" target="_blank">Click here to download the table results in an Excel file!</a>'
+    
+    st.markdown(html, unsafe_allow_html=True)
+    
+    return
+
+def download_table_old(df,name):
     """
     Generates a link allowing the data in a given panda dataframe to be downloaded
     in:  dataframe
