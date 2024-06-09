@@ -154,7 +154,8 @@ def search_results_adv(jee_rank,rank_var,inp_st,df,round_no,inst_bucket,location
     final_result_df = result_df[['Institute', 'Academic Program Name', 'Course Duration', 'Seat Type','Quota', 'Gender', 'Round', 'Opening Rank', 'Closing Rank', 'Location']]
     final_result_df = final_result_df.sort_values(['Closing Rank','Opening Rank'],ascending=True)
     st.subheader("Your Search Results : ")
-    st.dataframe(final_result_df)
+    final_result_df_reset = final_result_df.reset_index(drop=True)
+    st.dataframe(final_result_df_reset)
     #df_to_plotly(final_result_df)
     return final_result_df
         #st.write(result_df)
@@ -302,9 +303,9 @@ inst_type = [ele for ele in inst_type if ele in wanted_engg_mains_inst]
 
 st.cache(super)
 
-st.header("Jee Advanced 2023 : College Predictor ")
+st.header("Jee Advanced 2024 : College Predictor ")
 st.markdown('''
-            ###### College Predictor based on the data from [JOSAA 2022 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx) 
+            ###### College Predictor based on the data from [JOSAA 2023 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/SeatAllotmentResult/CurrentORCR.aspx) 
               
              **Mobile user ?**, please press the `>` button at the top-left corner on the page for the sidebar.  
                
