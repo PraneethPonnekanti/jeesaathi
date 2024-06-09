@@ -155,7 +155,8 @@ def search_results(jee_rank,rank_var,inp_st,df,round_no,inst_bucket,d_state,loca
     final_result_df = final_result_df[['Institute', 'Academic Program Name', 'Course Duration', 'Seat Type','Quota', 'Gender', 'Round', 'Opening Rank', 'Closing Rank', 'Location']]
     final_result_df = final_result_df.sort_values(['Closing Rank','Opening Rank'],ascending=True)
     st.subheader("Your Search Results : ")
-    st.dataframe(final_result_df)
+    final_result_df_reset = final_result_df.reset_index(drop=True)
+    st.dataframe(final_result_df_result)
     #df_to_plotly(final_result_df)
     return final_result_df
         #st.write(result_df)
@@ -298,12 +299,12 @@ inst_type = [ele for ele in inst_type if ele not in unwanted_engg_mains_inst]
 
 st.cache(super)
 
-st.header("Jee Mains 2023 : College Predictor ")
+st.header("Jee Mains 2024 : College Predictor ")
 st.markdown('''
-            ###### College Predictor based on the data from [JOSAA 2022 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/seatmatrix/openingclosingrankarchieve.aspx) 
+            ###### College Predictor based on the data from [JOSAA 2023 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/SeatAllotmentResult/CurrentORCR.aspx) 
               
              **Mobile user ?**, please press the `>` button at the top-left corner on the page for the sidebar.  
-               
+                
              * Wanna checkout IIT's using your JEE Advanced rank ? Checkout our [JEE Advanced Predictor](https://share.streamlit.io/praneethponnekanti/jeesaathi/main/josaa_advanced.py)   
               
             **Credits :** App built in `Python` + `Streamlit` by [Praneeth Ponnekanti](https://www.linkedin.com/in/praneeth-ponnekanti/) 
