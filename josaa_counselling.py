@@ -59,6 +59,8 @@ def insti_type(df):
         return "IIIT"
     if 'School of Planning & Architecture' in df:
         return "SPA"
+    if 'Indian Institute of Handloom Technology' in df:
+        return "GFTI"
     else :
         return "GFTI"
     
