@@ -180,7 +180,7 @@ def download_table(df, name):
     in:  dataframe
     out: href string
     """
-    op_file = "JeeSaathi_Adv_SearchResults_" + name + ".xlsx"
+    op_file = "JeeSaathi_Mains_SearchResults_" + name + ".xlsx"
     sheet_fmt = name + "_" + str(time.strftime('%d-%m-%Y'))
     output = io.BytesIO()
     
