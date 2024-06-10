@@ -156,7 +156,7 @@ def search_results(jee_rank,rank_var,inp_st,df,round_no,inst_bucket,d_state,loca
     final_result_df = final_result_df.sort_values(['Closing Rank','Opening Rank'],ascending=True)
     st.subheader("Your Search Results : ")
     final_result_df_reset = final_result_df.reset_index(drop=True)
-    st.dataframe(final_result_df_result)
+    st.dataframe(final_result_df_reset)
     #df_to_plotly(final_result_df)
     return final_result_df
         #st.write(result_df)
