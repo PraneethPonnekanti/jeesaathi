@@ -33,7 +33,7 @@ r2 = pd.read_csv("./Inputs/Josaa_R2.csv")
 r3 = pd.read_csv("./Inputs/Josaa_R3.csv")
 r4 = pd.read_csv("./Inputs/Josaa_R4.csv")
 r5 = pd.read_csv("./Inputs/Josaa_R5.csv")
-r6 = pd.read_csv("./Inputs/Josaa_R6.csv")
+#r6 = pd.read_csv("./Inputs/Josaa_R6.csv")
 college_states = pd.read_csv("./Inputs/Josaa_College_States.csv")
 domicile_states = pd.read_csv("./Inputs/josaa_domicile_states.csv")
 josaa_business_rules = pd.read_csv("./Inputs/josaa_business_rules.csv")
@@ -47,7 +47,7 @@ r2['Round'] = 2
 r3['Round'] = 3
 r4['Round'] = 4
 r5['Round'] = 5
-r6['Round'] = 6
+#r6['Round'] = 6
 
 
 def insti_type(df):
@@ -243,7 +243,8 @@ def sort_list(_input):
     _input.sort()
     return _input
 
-append_df = pd.concat([r1,r2,r3,r4,r5,r6],ignore_index=True)
+#append_df = pd.concat([r1,r2,r3,r4,r5,r6],ignore_index=True)
+append_df = pd.concat([r1,r2,r3,r4,r5],ignore_index=True)
 append_df = append_df.dropna()
 
 inst_list = pd.DataFrame(append_df.Institute.unique(),columns = ['Institute'])
@@ -299,7 +300,7 @@ inst_type = [ele for ele in inst_type if ele not in unwanted_engg_mains_inst]
 
 #st.cache(super)
 
-st.header("Jee Mains 2024 : College Predictor ")
+st.header("Jee Mains 2025 : College Predictor ")
 st.markdown('''
             ###### College Predictor based on the data from [JOSAA 2023 Opening & Closing Ranks](https://josaa.admissions.nic.in/applicant/SeatAllotmentResult/CurrentORCR.aspx) 
               
