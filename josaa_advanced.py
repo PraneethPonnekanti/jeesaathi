@@ -301,7 +301,7 @@ inst_type = [ele for ele in inst_type if ele in wanted_engg_mains_inst]
     
 #Streamlit configuration goes in here.
 
-st.cache(super)
+#st.cache(super)
 
 st.header("Jee Advanced 2024 : College Predictor ")
 st.markdown('''
